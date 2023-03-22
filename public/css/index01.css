@@ -1,0 +1,38 @@
+html {
+  font-size: 62.5%;
+}
+
+#wrap {
+  width: 100%;
+  height: 100%;
+}
+#wrap header {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+}
+#wrap header h1 {
+  width: 50%;
+  height: 100%;
+  font-size: 3.2rem;
+  border: 1px solid tomato;
+}
+#wrap header .headbox {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  border: 1px solid skyblue;
+}
+#wrap header .headbox .calender {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #000;
+  margin: 0.5rem;
+}
+#wrap header .headbox .nav {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #000;
+  margin: 0.5rem;
+}
