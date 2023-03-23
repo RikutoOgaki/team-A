@@ -1,28 +1,34 @@
-html{
+html {
     font-size: 62.5%;
 }
-#wrap{
+
+#wrap {
     width: 100%;
     height: 100vh;
-    background:#75B8F6;
-    header{
+    background: #75B8F6;
+
+    header {
         width: 100%;
         height: 5vh;
         display: flex;
-        h1{
+
+        h1 {
             width: 50%;
             height: 100%;
-            font-size: 3.2rem;
-            padding: 1rem 0 0 2rem;
+            font-size: 2.8rem;
+            padding: 2rem 0 0 2rem;
+            color: #fff;
         }
-        & .headbox{
+
+        & .headbox {
             width: 50%;
             height: 100%;
             display: flex;
             justify-content: flex-end;
             gap: 1rem;
             padding: 1rem 2rem 0 0;
-            & .nav{
+
+            & .nav {
                 width: 3rem;
                 height: 3rem;
                 margin: 1rem;
@@ -31,33 +37,122 @@ html{
                 justify-content: center;
                 align-items: center;
                 gap: .7rem;
-                & span{
+
+                & span {
                     width: 80%;
                     border: .5px solid #fff;
                 }
             }
         }
     }
-    main{
+
+    main {
         width: 100%;
-        height: 100%;
-        .border{
+
+        .border {
             width: 90%;
             display: block;
             border: 1px solid #fff;
             margin: 0 auto;
             margin-top: 3rem;
         }
-        section{
+
+        section {
             display: flex;
             flex-direction: column;
-            gap: 4rem;
-            & > div{
-                & .textform{
-                    border-bottom:1px solid #000 ;
+            gap: 7rem;
+            margin: 3rem 0 0 3rem;
+
+            &>div {
+                .textform {
+                    border-bottom: 1px solid #fff;
+                    width: 17rem;
+                    color: #fff;
+                    text-align: center;
+                }
+
+                & p {
+                    font-size: 1.6rem;
+                    color: #fff;
+                    margin-bottom: 1rem;
                 }
             }
-            
+
+            .box {
+                width: 100%;
+                height: 2.5rem;
+
+                & .typebox {
+                    width: 24rem;
+                    height: 100%;
+                    display: flex;
+                    margin: 1rem 0 0 2rem;
+
+                    & div {
+                        width: 8rem;
+                        height: 100%;
+                        text-align: center;
+                        line-height: 1.5;
+                        color: #fff;
+                        border: 1px solid #fff;
+                        font-size: 1.5rem;
+
+                        &:nth-child(1) {
+                            background-color: #9AD9E1;
+                        }
+
+                        &:nth-child(2) {
+                            background-color: #FDCC8A;
+                        }
+
+                        &:nth-child(3) {
+                            background-color: #FB9AA3;
+                        }
+                    }
+                }
+            }
+
+            .form {
+                display: flex;
+                justify-content: start;
+                flex-direction: column;
+
+                .input {
+                    display: flex;
+                }
+            }
+
+            .plus {
+                display: flex;
+                justify-content: center;
+                width: 17rem;
+
+                & p {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    border: 1px solid #fff;
+                    text-align: center;
+                    border-radius: 50%;
+                    line-height: 1.3;
+                }
+            }
+        }
+    }
+
+    footer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 4rem;
+
+        .btn {
+            width: 10rem;
+            height: 4.5rem;
+            border-radius: 30px;
+            border: 1px solid #fff;
+            color: #fff;
+            font-size: 2.4rem;
+
         }
     }
 }

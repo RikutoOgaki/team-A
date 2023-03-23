@@ -15,8 +15,9 @@ html {
 #wrap header h1 {
   width: 50%;
   height: 100%;
-  font-size: 3.2rem;
-  padding: 1rem 0 0 2rem;
+  font-size: 2.8rem;
+  padding: 2rem 0 0 2rem;
+  color: #fff;
 }
 #wrap header .headbox {
   width: 50%;
@@ -42,7 +43,6 @@ html {
 }
 #wrap main {
   width: 100%;
-  height: 100%;
 }
 #wrap main .border {
   width: 90%;
@@ -54,8 +54,80 @@ html {
 #wrap main section {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 7rem;
+  margin: 3rem 0 0 3rem;
 }
 #wrap main section > div .textform {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #fff;
+  width: 17rem;
+  color: #fff;
+  text-align: center;
+}
+#wrap main section > div p {
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+#wrap main section .box {
+  width: 100%;
+  height: 2.5rem;
+}
+#wrap main section .box .typebox {
+  width: 24rem;
+  height: 100%;
+  display: flex;
+  margin: 1rem 0 0 2rem;
+}
+#wrap main section .box .typebox div {
+  width: 8rem;
+  height: 100%;
+  text-align: center;
+  line-height: 1.5;
+  color: #fff;
+  border: 1px solid #fff;
+  font-size: 1.5rem;
+}
+#wrap main section .box .typebox div:nth-child(1) {
+  background-color: #9AD9E1;
+}
+#wrap main section .box .typebox div:nth-child(2) {
+  background-color: #FDCC8A;
+}
+#wrap main section .box .typebox div:nth-child(3) {
+  background-color: #FB9AA3;
+}
+#wrap main section .form {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
+#wrap main section .form .input {
+  display: flex;
+}
+#wrap main section .plus {
+  display: flex;
+  justify-content: center;
+  width: 17rem;
+}
+#wrap main section .plus p {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #fff;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 1.3;
+}
+#wrap footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+#wrap footer .btn {
+  width: 10rem;
+  height: 4.5rem;
+  border-radius: 30px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 2.4rem;
 }
