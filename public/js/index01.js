@@ -1,11 +1,15 @@
 const btn = document.querySelectorAll('.btn');
 const text = document.querySelectorAll('.chatText');
 const box = document.querySelector('.chatbox');
-const message = document.querySelectorAll('.message')
-console.log(btn, text, box);
+const message = document.querySelectorAll('.message');
+const plus = document.querySelector('.plus');
+console.log(btn, text, box, plus);
+
+plus.addEventListener('click', () => {
+
+})
 
 const chat = 'chat.json'
-
 
 fetch(chat)
     .then(response => response.json())
