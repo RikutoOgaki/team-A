@@ -4,6 +4,7 @@ html{
 #wrap{
     width: 100%;
     height: 100%;
+    background: linear-gradient(#75B8F6,#fff);
     header{
         width: 100%;
         height: 5vh;
@@ -12,25 +13,134 @@ html{
             width: 50%;
             height: 100%;
             font-size: 3.2rem;
-            border: 1px solid tomato;
         }
         & .headbox{
             width: 50%;
             height: 100%;
             display: flex;
             justify-content: flex-end;
-            border: 1px solid skyblue;
+            gap: 1rem;
+            // border: 1px solid skyblue;
             & .calender{
-                width: 2rem;
-                height: 2rem;
+                width: 3rem;
+                height: 3rem;
                 border: 1px solid #000;
-                margin: .5rem;
+                margin: 1rem;
             }
             & .nav{
-                width: 2rem;
-                height: 2rem;
+                width: 3rem;
+                height: 3rem;
                 border: 1px solid #000;
-                margin: .5rem;
+                margin: 1rem;
+            }
+        }
+    }
+    main{
+        .weather{
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            border-top: 1px solid #000;
+            margin-top: 3rem;
+            & div:first-child{
+                width: 50%;
+                height: 4vh;
+                border-right: 1px solid #000;
+                text-align: center;
+                font-size: 1.8rem;
+                line-height: 2;
+            }
+            & div:last-child{
+                width: 50%;
+                text-align: center;
+                font-size: 1.8rem;
+                line-height: 2;
+            }
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            & > div{
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                .statbox{
+                    margin: 6rem 4rem 0 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .dayweather{
+                        font-size: 1.8rem;
+                    }
+                    .statistics{
+                        width: 25rem;
+                        height: 25rem;
+                        border-radius: 50%;
+                        margin-top: 2rem;
+                        background-image: conic-gradient(tomato 0deg 120deg,#787878 120deg 200deg, skyblue 200deg 360deg);
+                    }
+                }
+                .symbolbox{
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-top: 9rem;
+                    height: 100%;
+                    & p{
+                        font-size: 2rem;
+                        line-height: 5;
+                        margin-right: 1rem;
+                    }
+                }
+            }
+            .plusbox{
+                width: 80%;
+                margin: 2rem auto 0;
+                text-align: center;
+                line-height: 1.4;
+                & > p{
+                    width: 5rem;
+                    height: 5rem;
+                    border-radius: 50%;
+                    border: #000 2px solid;
+                    & span{
+                        font-size: 3.2rem;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        section{
+            .btnbox{
+                ul{
+                    display: flex;
+                    list-style: none;
+                    li{
+                        &:nth-child(1){
+                            background-color: #75B8F6;
+                        }
+                        &:nth-child(2){
+                            background-color: #FDCC8A;
+                        }
+                        &:nth-child(3){
+                            background-color: #FB9AA3;
+                        }
+                        .btn{
+                            width: 4rem;
+                            height: 3rem;
+                            border: #000 1px solid ;
+                            color: #fff;
+                            font-weight: bold;
+                        }
+                    }   
+                }
+            }
+            .chatbox{
+
+            }
+            & > div:last-child{
+
             }
         }
     }
