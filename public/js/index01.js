@@ -3,15 +3,19 @@ const text = document.querySelectorAll('.chatText');
 const box = document.querySelector('.chatbox');
 const message = document.querySelectorAll('.message');
 const plus = document.querySelector('.plus');
+const wrap = document.getElementById('box')
 console.log(btn, text, box, plus);
 
-plus.addEventListener('click', (evt) => {
-    console.log(evt.target);
-    let div = document.createElement('div');
-    div.classList.add('overlay');
-    let btn = document.createElement('button');
-    btn.textContent = '✕'
-})
+// let div = document.createElement('div');
+// div.id = 'box';
+// let fig = document.createElement('figure')
+// let img = document.createElement('img')
+// img.src = '/public/img/12x.png'
+// fig.appendChild(img)
+
+
+
+
 
 const chat = 'chat.json'
 
