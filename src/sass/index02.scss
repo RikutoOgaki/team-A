@@ -69,7 +69,13 @@ html {
                     width: 17rem;
                     color: #fff;
                     text-align: center;
+
                 }
+
+                .textform::before {
+                    background: url("/public/img/icon.png");
+                }
+
 
                 & p {
                     font-size: 1.6rem;

@@ -5,8 +5,12 @@ const message = document.querySelectorAll('.message');
 const plus = document.querySelector('.plus');
 console.log(btn, text, box, plus);
 
-plus.addEventListener('click', () => {
-
+plus.addEventListener('click', (evt) => {
+    console.log(evt.target);
+    let div = document.createElement('div');
+    div.classList.add('overlay');
+    let btn = document.createElement('button');
+    btn.textContent = '✕'
 })
 
 const chat = 'chat.json'
