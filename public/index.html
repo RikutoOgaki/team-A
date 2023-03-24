@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self</title>
+    <link rel="stylesheet" href="css/ress.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>
+            <img src="./img/32x.png" alt="">
+        </h1>
+        <div class="headbox">
+            <div class="calender"></div>
+            <div class="nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="weather">
+            <div>
+                <p>天気</p>
+            </div>
+            <div>
+                <p>今の状況</p>
+            </div>
+        </div>
+
+        <div class="wether">
+            <div class="selectbox">
+                <div class="date"></div>
+                <select name="住所" id="select_box">
+                    <option value="hokkaido">北海道</option>
+                    <optgroup label="東北">
+                        <option value="aomori">青森県</option>
+                        <option value="akita">秋田県</option>
+                        <option value="iwate">岩手県</option>
+                        <option value="yamagata">山形県</option>
+                        <option value="miyagi">宮城県</option>
+                        <option value="fukushima">福島県</option>
+                    </optgroup>
+                    <optgroup label="関東">
+                        <option value="ibaraki">茨城県</option>
+                        <option value="tochigi">栃木県</option>
+                        <option value="gunma">群馬県</option>
+                        <option value="saitama">埼玉県</option>
+                        <option value="chiba">千葉県</option>
+                        <option value="tokyo">東京都</option>
+                        <option value="kanagawa">神奈川県</option>
+                    </optgroup>
+                    <optgroup label="中部">
+                        <option value="niigata">新潟県</option>
+                        <option value="toyama">富山県</option>
+                        <option value="ishikawa">石川県</option>
+                        <option value="fukui">福井県</option>
+                        <option value="yamanashi">山梨県</option>
+                        <option value="nagano">長野県</option>
+                        <option value="gifu">岐阜県</option>
+                        <option value="shizuoka">静岡県</option>
+                        <option value="aichi">愛知県</option>
+                    </optgroup>
+                    <optgroup label="近畿">
+                        <option value="mie">三重県</option>
+                        <option value="shiga">滋賀県</option>
+                        <option value="kyoto">京都府</option>
+                        <option value="oosaka">大阪府</option>
+                        <option value="gyougo">兵庫県</option>
+                        <option value="nara">奈良県</option>
+                        <option value="wakayama">和歌山県</option>
+                    </optgroup>
+                    <optgroup label="中国">
+                        <option value="okayama">岡山県</option>
+                        <option value="hiroshima">広島県</option>
+                        <option value="tottori">鳥取県</option>
+                        <option value="shimane">島根県</option>
+                        <option value="yamaguchi">山口県</option>
+                    </optgroup>
+                    <optgroup label="四国">
+                        <option value="tokushima">徳島県</option>
+                        <option value="kagawa">香川県</option>
+                        <option value="ehime">愛媛県</option>
+                        <option value="kouchi">高知県</option>
+                    </optgroup>
+                    <optgroup label="九州沖縄">
+                        <option value="fukuoka">福岡県</option>
+                        <option value="saga">佐賀県</option>
+                        <option value="nagasaki">長崎県</option>
+                        <option value="kumamoto">熊本県</option>
+                        <option value="ooita">大分県</option>
+                        <option value="miyazaki">宮崎県</option>
+                        <option value="kagoshima">鹿児島県</option>
+                        <option value="okinawa">沖縄県</option>
+                    </optgroup>
+                </select>
+                <img class="triangle" src="img/btn.png" alt="">
+            </div>
+
+            <!-- 現在の天気の表示 -->
+            <div class="current">
+                <div class="weather_icon">
+                    <img src="" alt="">
+                </div>
+                <div class="current_list">
+                    <div class="current_temp"></div>
+                    <div class="current_humi"></div>
+                    <div class="current_wind"></div>
+                </div>
+                <!-- 空けたまま -->
+            </div>
+
+
+            <div class="time">
+                <div class="time-parts01"></div>
+                <div class="time-parts02"></div>
+            </div>
+            <ul class="time-no">
+                <li>
+                    <p>0</p>
+                </li>
+                <li>
+                    <p>3</p>
+                </li>
+                <li>
+                    <p>6</p>
+                </li>
+                <li>
+                    <p>9</p>
+                </li>
+                <li>
+                    <p>12</p>
+                </li>
+                <li>
+                    <p>15</p>
+                </li>
+                <li>
+                    <p>18</p>
+                </li>
+                <li>
+                    <p>21</p>
+                </li>
+                <li>
+                    <p>24</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="fashion">
+            <div class="fasthion_wrapper">
+                <h2>今日の<span class="big">オススメ</span>の<span class="big">服装</span></h2>
+                <p class="fashion_text"></p>
+            </div>
+            <img class="fashion_img" src="" alt="" height="270">
+        </div>
+
+    </main>
+    <script>
+        "use strict";
+        const body = document.querySelector('body');
+        const current_temp = document.querySelector('.current_temp');
+        const weather_icon = document.querySelector('.weather_icon img');
+        const current_humi = document.querySelector('.current_humi');
+        const current_wind = document.querySelector('.current_wind');
+        const timeParts02 = document.querySelector('.time-parts02');
+        const timeNo = document.querySelector('.time-no');
+        const select = document.querySelector('#select_box');
+        const fashionText = document.querySelector('.fashion_text');
+        const fashionImg = document.querySelector('.fashion_img');
+
+        let city = 'tokyo';
+        let no = Math.floor(Math.random() * 4);
+        const API_KEY = '29a2640072af10017c1eea3f56197366';
+        let current_url = `http://api.openweathermap.org/data/2.5/weather?q=${city},jp&units=metric&APPID=${API_KEY}&lang=ja`;
+        let forecast_url = `http://api.openweathermap.org/data/2.5/forecast?q=${city},jp&units=metric&APPID=${API_KEY}&lang=ja`;
+
+        const now = new Date();
+        let month = now.getMonth() + 1;
+        let date = now.getDate();
+        let hour = now.getHours();
+
+        const today = document.querySelector('.date');
+
+        today.innerHTML = `${month}<span class = "small">月</span>${date}<span class = "small">の</span>`;
+
+        // const clock = () => {
+        //             const now = new Date();
+        //             let hour = now.getHours();//時
+        //             timeParts02.style.
+        //             requestAnimationFrame(clock);            
+        //         }
+        //         clock();
+
+
+        if (hour < 4) {
+            body.style.background = 'rgb(30,19,94)';
+            body.style.background = 'linear-gradient(180deg, rgba(30,19,94,1) 0%, rgba(100,53,136,1) 50%, rgba(255,255,255,1) 100%)';
+            body.style.backgroundRepeat = 'no-repeat';
+            timeParts02.style.background = '#3A3279';
+            timeNo.style.color = '#fff';
+        } else if (hour < 7) {
+            body.style.background = 'rgb(102,105,181)';
+            body.style.background = 'linear-gradient(180deg, rgba(102,105,181,1) 0%, rgba(255,190,131,1) 50%, rgba(255,255,255,1) 100%)';
+            body.style.backgroundRepeat = 'no-repeat';
+            timeParts02.style.background = '#B08065';
+            timeNo.style.color = '#6D6D6D';
+        } else if (hour < 15) {
+            body.style.background = 'rgb(82,157,245)';
+            body.style.background = 'linear-gradient(180deg, rgba(82,157,245,1) 0%, rgba(169,250,255,1) 50%, rgba(239,239,239,1) 100%)';
+            body.style.backgroundRepeat = 'no-repeat';
+            timeParts02.style.background = '#69C9FF';
+            timeNo.style.color = '#6D6D6D';
+        } else if (hour < 19) {
+            console.log(1);
+            body.style.background = 'rgb(246,196,120)';
+            body.style.background = 'linear-gradient(180deg, rgba(246,196,120,1) 0%, rgba(237,142,101,1) 50%, rgba(239,239,239,1) 100%)';
+            body.style.backgroundRepeat = 'no-repeat';
+            timeParts02.style.background = '#C1967E';
+            timeNo.style.color = '#6D6D6D';
+        } else {
+            body.style.background = 'rgb(82,157,245)';
+            body.style.background = 'linear-gradient(180deg, rgba(82,157,245,1) 0%, rgba(169,250,255,1) 50%, rgba(239,239,239,1) 100%)';
+            body.style.backgroundRepeat = 'no-repeat';
+            timeParts02.style.background = '#3A3279';
+            timeNo.style.color = '#fff';
+        }
+
+
+        // 現在の天気の表示処理
+        const current_view = (data) => {
+            console.log(data);
+            console.log(data.name);
+            console.log(data.main.temp);
+            console.log(`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
+            current_temp.innerHTML = `${Math.round(data.main.temp)}<span class = "c">℃</span>`;
+            current_humi.innerHTML = `湿度：${Math.round(data.main.humidity)}%`;
+            current_wind.innerHTML = `風速：${Math.round(data.wind.speed)}m/s`
+            // let temp = Math.round(data.main.temp);
+            weather_icon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
+            if (data.weather[0].main === 'Rain') {
+                console.log("10℃以下");
+            }
+        }
+
+        //現在の天気を取得
+        fetch(current_url)
+            .then(res => {
+                // res.json()をreturnすることで、次のthenにAPIで取得できる
+                // データをオブジェクト形式で渡すことができる
+                return res.json();
+            })
+            .then(data => {
+                // res.json()で受け取った中身を確認
+                // 実際にはここでdataの中身を利用して様々な処理をする
+                current_view(data);
+            });
+
+        //fashionのjsonを取得
+        const fa = "fashion.json"
+        fetch(fa)
+            .then(response => {
+                return response.json();
+            })
+            .then(json => {
+                console.log(json);
+                fashionText.innerHTML = `${json[no].text}`;
+                fashionImg.src = `${json[no].img}`
+            })
+
+        select.addEventListener('change', () => {
+            console.log(select.value);
+            city = select.value;
+            current_url = `http://api.openweathermap.org/data/2.5/weather?q=${city},jp&units=metric&APPID=${API_KEY}&lang=ja`;
+            forecast_url = `http://api.openweathermap.org/data/2.5/forecast?q=${city},jp&units=metric&APPID=${API_KEY}&lang=ja`;
+
+            fetch(current_url)
+                .then(res => {
+                    // res.json()をreturnすることで、次のthenにAPIで取得できる
+                    // データをオブジェクト形式で渡すことができる
+                    return res.json();
+                })
+                .then(data => {
+                    // res.json()で受け取った中身を確認
+                    // 実際にはここでdataの中身を利用して様々な処理をする
+                    current_view(data);
+                });
+        });
+
+        console.log(hour);
+    </script>
+</body>
+
+</html>

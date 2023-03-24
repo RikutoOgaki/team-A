@@ -10,21 +10,21 @@ html {
   background: linear-gradient(#529DF5, #A9FAFF, #fff);
   z-index: 1;
 }
-#wrap s header {
+#wrap header {
   width: 100%;
   height: 5vh;
   display: flex;
 }
-#wrap s header h1 {
+#wrap header h1 {
   width: 50%;
   height: 100%;
   padding: 2rem 0 0 2rem;
 }
-#wrap s header h1 img {
+#wrap header h1 img {
   width: 5rem;
   height: 3.5rem;
 }
-#wrap s header .headbox {
+#wrap header .headbox {
   width: 50%;
   height: 100%;
   display: flex;
@@ -32,7 +32,7 @@ html {
   gap: 1rem;
   padding: 1rem 2rem 0 0;
 }
-#wrap s header .headbox .nav {
+#wrap header .headbox .nav {
   width: 3rem;
   height: 3rem;
   margin: 1rem;
@@ -42,7 +42,7 @@ html {
   align-items: center;
   gap: 0.7rem;
 }
-#wrap s header .headbox .nav span {
+#wrap header .headbox .nav span {
   width: 80%;
   border: 0.5px solid #fff;
 }
